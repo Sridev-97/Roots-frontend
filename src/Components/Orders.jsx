@@ -8,7 +8,7 @@ function Orders() {
   useEffect(() => {
     const fetchOrderData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/orders");
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/orders`);
         if (!response.ok) throw new Error("Failed to fetch data");
         const data = await response.json();
         setOrders(data);
@@ -26,7 +26,7 @@ function Orders() {
       const confirm = window.confirm("Are you sure you want to delete this order?");
       if (!confirm) return;
 
-      const response = await fetch(`http://localhost:5000/orders/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/orders/${id}`, {
         method: "DELETE",
       });
 
