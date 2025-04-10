@@ -16,7 +16,7 @@ function Kids() {
     useEffect(() => {
         const fetchBathroomData = async () => {
             try {
-                const response = await fetch("http://localhost:5000/kids");
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/kids`);
                 if (!response.ok) throw new Error("Failed to fetch data");
                 const data = await response.json();
                 setkidsData(data);
