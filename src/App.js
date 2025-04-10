@@ -15,8 +15,8 @@ import Footer from "./Components/common/Footer";
 
 function Layout({ children }) {
   const location = useLocation();
-  const noNavbar = ["/login", "/signup", "/"];
-  const noFooter = ["/login", "/signup", "/", "/cart"];
+  const noNavbar = ["/login", "/signup"];
+  const noFooter = ["/login", "/signup", "/cart"];
 
 
   return (
