@@ -115,7 +115,7 @@ function Navbar() {
         )}
 
         {!log && (
-          <button className='button-style hidden md:block text-white' onClick={() => navigate("/login")}>Login</button>
+          <button className='button-style text-white' onClick={() => navigate("/login")}>Login</button>
         )}
       </div>
 
