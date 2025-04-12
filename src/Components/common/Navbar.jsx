@@ -80,12 +80,7 @@ function Navbar() {
         )}
 
         {!log && (
-          <button
-            className="ml-2 bg-violet-800 text-white px-3 py-1 rounded text-sm"
-            onClick={() => navigate("/login")}
-          >
-            Login
-          </button>
+          <button className='button-style text-white' onClick={() => navigate("/login")}>Login</button>
         )}
 
       </div>
