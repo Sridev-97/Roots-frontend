@@ -78,6 +78,16 @@ function Navbar() {
             )}
           </div>
         )}
+
+        {!log && (
+          <button
+            className="ml-2 bg-violet-800 text-white px-3 py-1 rounded text-sm"
+            onClick={() => navigate("/login")}
+          >
+            Login
+          </button>
+        )}
+
       </div>
 
       {/* Desktop Menu */}
@@ -115,7 +125,7 @@ function Navbar() {
         )}
 
         {!log && (
-          <button className='button-style text-white' onClick={() => navigate("/login")}>Login</button>
+          <button className='button-style hidden md:block text-white' onClick={() => navigate("/login")}>Login</button>
         )}
       </div>
 
